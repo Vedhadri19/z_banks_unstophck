@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Z-Banks</title>
+  <link rel="stylesheet" href="login.css" />
+  <link rel="shortcut icon" href="logo2.png" type="image/x-icon">
+  <style>
+    .fade-in { opacity: 0; animation: fadeIn 1s forwards; }
+    @keyframes fadeIn { to { opacity: 1; } }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <form id="signupForm">
+      <h1>Sign Up</h1>
+      <div class="input-box">
+        <input type="text" id="signup-username" placeholder="Username" required />
+      </div>
+      <div class="input-box">
+        <input type="text" id="signup-firstname" placeholder="First Name" required />
+      </div>
+      <div class="input-box">
+        <input type="text" id="signup-lastname" placeholder="Last Name (optional)" />
+      </div>
+      <div class="input-box">
+        <input type="password" id="signup-password" placeholder="Password" required />
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+      <div class="register-link">
+        <p>Already have an account? <a href="login.html">Login</a></p>
+      </div>
+    </form>
+  </div>
+  <script>
+    // Fade-in animation for all elements
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('body *').forEach(el => el.classList.add('fade-in'));
+    });
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('signup-username').value.trim();
+      const firstname = document.getElementById('signup-firstname').value.trim();
+      const lastname = document.getElementById('signup-lastname').value.trim();
+      const password = document.getElementById('signup-password').value;
+      let users = JSON.parse(localStorage.getItem('users') || '[]');
+      if (users.some(u => u.username === username)) {
+        alert('Username already exists.');
+        return;
+      }
+      users.push({ username, firstname, lastname, password });
+      localStorage.setItem('users', JSON.stringify(users));
+      alert('Sign-up successful! Please login.');
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html> 

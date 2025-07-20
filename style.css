@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  /* background: #f5f7fa; */
+  background: linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+  color: #333;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  background: #240046;
+  color: white;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.sidebar .logo {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  padding: 0.8rem 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar nav ul li:hover {
+  color: #61dafb;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.topbar input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.topbar h1{
+  font-size: 2.5em;
+
+  /* background: linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block; */
+}
+.topbar .username{
+   background: linear-gradient(90deg, rgba(11, 73, 206, 0.618) 0%, hsla(220, 78%, 29%, 1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  /* background: white; */
+  background: radial-gradient(circle, hsl(298deg 68% 90% / 0%) 30%, hsl(284deg 94% 86% / 62%) 100%);
+  /* radial-gradient(circle, hsl(298deg 68% 90% / 0%) 30%, hsl(284deg 94% 86% / 62%) 100%); */
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.account-summary h2 {
+  color: #0061ff;
+  margin: 0.5rem 0;
+}
+
+.account-summary button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #0061ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.quick-actions .actions button {
+  margin: 0.3rem 0.3rem 0 0;
+  padding: 0.5rem;
+  background: #eef3fb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.recent-transactions table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.recent-transactions th,
+.recent-transactions td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.recent-transactions a {
+  color: #0061ff;
+  font-size: 0.85rem;
+}
+
+.card-box .visa-card {
+  display: flex;
+  justify-content: space-between;
+  background: #122f5c;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.card-box button {
+  padding: 0.4rem 0.8rem;
+  background: #e53935;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.security ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.security ul li {
+  margin: 0.3rem 0;
+}

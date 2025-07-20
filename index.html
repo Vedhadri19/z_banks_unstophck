@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Z-Banks Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo2.png" type="image/x-icon">
+  <style>
+    .fade-in { opacity: 0; animation: fadeIn 1s forwards; }
+    @keyframes fadeIn { to { opacity: 1; } }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2 class="logo">Z-Banks</h2>
+      <nav>
+        <ul>
+          <li>Dashboard</li>
+          <li>Accounts</li>
+          <li>Transfers</li>
+          <li>Payments</li>
+          <li>Cards</li>
+          <li>Investments</li>
+          <li>Support</li>
+          <li>Logout</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <h1>Good morning, <span class="username">John</span>.</h1>
+        <div class="topbar-right">
+          <input type="text" placeholder="Search..." />
+          <img src="https://i.pravatar.cc/40" alt="Profile" class="avatar" />
+        </div>
+      </header>
+
+      <section class="grid">
+        <div class="card account-summary">
+          <h3>Account Summary</h3>
+          <p>AXXX-1234</p>
+          <h2>₹ 56,230.75</h2>
+          <span>Savings</span>
+          <button>View Transactions</button>
+        </div>
+
+        <div class="card quick-actions">
+          <h3>Quick Actions</h3>
+          <div class="actions">
+            <button>Transfer Money</button>
+            <button>Pay Bills</button>
+            <button>Manage Cards</button>
+          </div>
+        </div>
+
+        <div class="card recent-transactions">
+          <h3>Recent Transactions</h3>
+          <table>
+            <tr><th>Date</th><th>Description</th><th>Type</th><th>Amount</th></tr>
+            <tr><td>20 Jul</td><td>Grocery Store</td><td>Debit</td><td>₹ 1,500</td></tr>
+            <tr><td>19 Jul</td><td>Salary Credit</td><td>Credit</td><td>₹ 50,000</td></tr>
+            <tr><td>18 Jul</td><td>Mobile Recharge</td><td>Debit</td><td>₹ 399</td></tr>
+          </table>
+          <a href="#">View All Transactions</a>
+        </div>
+
+        <div class="card profile-info">
+          <h3>Profile Info</h3>
+          <p class="username">John Doe</p>
+          <p><span class="username">john</span> .@example.com</p>
+          <p>+91 98755 45210</p>
+          <p>KYC Status: ✅ Verified</p>
+        </div>
+
+        <div class="card card-box">
+          <h3>Cards</h3>
+          <div class="visa-card">
+            <span>VISA **** 6765</span>
+            <span>Exp: 09/25</span>
+          </div>
+          <button>Freeze Card</button>
+        </div>
+
+        <div class="card security">
+          <h3>Security</h3>
+          <ul>
+            <li>Change Password</li>
+            <li>Enable 2FA</li>
+            <li>Last Login: 19 Jul, 11:45 AM</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    const username = localStorage.getItem('username');
+    if (username) {
+      const usernameSpan = document.querySelector('.username');
+      if (usernameSpan) usernameSpan.textContent = username;
+    }
+    // Fade-in animation for all elements
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('body *').forEach(el => el.classList.add('fade-in'));
+    });
+  </script>
+</body>
+</html>
