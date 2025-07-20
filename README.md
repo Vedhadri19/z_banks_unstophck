@@ -7,7 +7,7 @@ Selected statement:
 
 Z-Banks is a modern and responsive **banking dashboard web app** built using only HTML, CSS, and vanilla JavaScript. It provides a user-friendly interface for managing bank accounts, viewing recent transactions, and simulating secure login/signup operations.
 
-![Intro-Page](logoss.png)
+![Intro-Page](login_ss.png)
 
 ---
 
